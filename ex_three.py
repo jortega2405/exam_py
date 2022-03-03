@@ -1,22 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Mar  2 20:39:22 2022
+Created on Wed Mar  2 20:49:31 2022
 
 @author: joseortega
 """
 
-def ex_three(inv_one, inv_two, inv_three):
-    total = inv_one + inv_two + inv_three
+def ex_three(base_salary, sales):
+    comision = sales * 0.15
+    total_payment = base_salary + comision
 
-    p_one = inv_one/total * 100
-    p_two = inv_two / total * 100
-    p_three = inv_three / total * 100
-
-    return p_one, p_two, p_three
+    return f'El total de venta fue {sales}, con una comision de {comision}, el total a pagar es {total_payment}'
 
 
-p_one, p_two, p_three = ex_three(2000, 2000, 2000)
-print(f'Porcentaje 1: {p_one}')
-print(f'Porcentaje 2: {p_two}')
-print(f'Porcentaje 3: {p_three}')
+print(ex_three(10000, 10000))
